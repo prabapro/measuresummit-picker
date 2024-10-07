@@ -9,20 +9,21 @@ const config = {
 };
 
 // DOM Elements
-let mainContent,
-	sidebarArrow,
-	sidebar,
-	pickNowBtn,
-	entries,
-	saveEntriesBtn,
-	winnerDisplay,
-	winnerName,
-	winnerEmail,
+let animatedBg,
 	drawAgainBtn,
-	processDraw,
 	drawContent,
-	animatedBg,
-	fillSampleDataBtn;
+	entries,
+	fillSampleDataBtn,
+	mainContent,
+	pickNowBtn,
+	processDraw,
+	pullServerDataBtn,
+	saveEntriesBtn,
+	sidebar,
+	sidebarArrow,
+	winnerDisplay,
+	winnerEmail,
+	winnerName;
 
 let entriesList = [];
 let drumrollAudio;
@@ -30,27 +31,28 @@ let drumrollAudio;
 // Initialize function to be called when DOM is fully loaded
 const initialize = () => {
 	// Get DOM Elements
-	mainContent = document.getElementById('main-content');
-	sidebarArrow = document.getElementById('sidebar-arrow');
-	sidebar = document.getElementById('sidebar');
-	pickNowBtn = document.getElementById('pick-now-btn');
-	entries = document.getElementById('entries');
-	saveEntriesBtn = document.getElementById('save-entries-btn');
-	winnerDisplay = document.getElementById('winner-display');
-	winnerName = document.getElementById('winner-name');
-	winnerEmail = document.getElementById('winner-email');
-	drawAgainBtn = document.getElementById('draw-again-btn');
-	processDraw = document.getElementById('process-draw');
-	drawContent = document.getElementById('draw-content');
 	animatedBg = document.getElementById('gradient-background');
+	drawAgainBtn = document.getElementById('draw-again-btn');
+	drawContent = document.getElementById('draw-content');
+	entries = document.getElementById('entries');
 	fillSampleDataBtn = document.getElementById('fill-sample-data-btn');
+	mainContent = document.getElementById('main-content');
+	pickNowBtn = document.getElementById('pick-now-btn');
+	processDraw = document.getElementById('process-draw');
+	pullServerDataBtn = document.getElementById('pull-server-data-btn');
+	saveEntriesBtn = document.getElementById('save-entries-btn');
+	sidebar = document.getElementById('sidebar');
+	sidebarArrow = document.getElementById('sidebar-arrow');
+	winnerDisplay = document.getElementById('winner-display');
+	winnerEmail = document.getElementById('winner-email');
+	winnerName = document.getElementById('winner-name');
 
 	// Event Listeners
-	sidebarArrow.addEventListener('click', toggleSidebar);
-	saveEntriesBtn.addEventListener('click', saveEntries);
-	pickNowBtn.addEventListener('click', startDraw);
 	drawAgainBtn.addEventListener('click', startDraw);
 	fillSampleDataBtn.addEventListener('click', fillSampleData);
+	pickNowBtn.addEventListener('click', startDraw);
+	saveEntriesBtn.addEventListener('click', saveEntries);
+	sidebarArrow.addEventListener('click', toggleSidebar);
 
 	// Initialize the page
 	resetToHome();
@@ -58,7 +60,7 @@ const initialize = () => {
 
 const toggleSidebar = () => {
 	sidebar.classList.toggle('right-0');
-	sidebar.classList.toggle('-right-80');
+	sidebar.classList.toggle('-right-96');
 	sidebarArrow.classList.toggle('rotate-180');
 };
 
@@ -250,6 +252,10 @@ const fillSampleData = () => {
 		}
 	}, 300);
 };
+
+// TODO: Pull data from the Server
+
+// TODO: Send winner entries to Google Sheet
 
 // Wait for DOM to be fully loaded before initializing
 document.addEventListener('DOMContentLoaded', initialize);
