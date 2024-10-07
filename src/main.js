@@ -17,7 +17,6 @@ let animatedBg,
 	mainContent,
 	pickNowBtn,
 	processDraw,
-	pullServerDataBtn,
 	saveEntriesBtn,
 	sidebar,
 	sidebarArrow,
@@ -39,7 +38,6 @@ const initialize = () => {
 	mainContent = document.getElementById('main-content');
 	pickNowBtn = document.getElementById('pick-now-btn');
 	processDraw = document.getElementById('process-draw');
-	pullServerDataBtn = document.getElementById('pull-server-data-btn');
 	saveEntriesBtn = document.getElementById('save-entries-btn');
 	sidebar = document.getElementById('sidebar');
 	sidebarArrow = document.getElementById('sidebar-arrow');
@@ -252,8 +250,6 @@ const fillSampleData = () => {
 		}
 	}, 300);
 };
-
-// TODO: Pull data from the Server
 
 // TODO: Send winner entries to Google Sheet
 
