@@ -8,7 +8,7 @@ export default {
 				'roboto-condensed': ['"Roboto Condensed"', 'sans-serif'],
 			},
 			fontSize: {
-				'10xl': '16vmax',
+				'10xl': '12vmax',
 			},
 		},
 	},
