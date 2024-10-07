@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Winner Finder</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body
+		class="font-lexend m-0 p-0 h-screen overflow-hidden bg-gradient-to-br from-black to-purple-900 text-white">
+		<div id="animatedBg" class="animated-bg fixed inset-0 z-[-1]"></div>
+
+		<div
+			id="mainContent"
+			class="flex flex-col items-center justify-center h-screen transition-all duration-500 ease-in-out"
+			role="main">
+			<img
+				src="/assets/media/measuresummitlogo.webp"
+				id="logo"
+				class="mb-4 w-64"
+				alt="Logo" />
+			<h1 id="appTitle" class="mb-8 text-8xl font-semibold text-slate-100">
+				Winner
+				<span class="font-extralight">Finder</span>
+			</h1>
+			<button
+				id="pickNowBtn"
+				class="hidden bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-600 transition-colors">
+				Draw Now
+			</button>
+		</div>
+
+		<div
+			id="sidebarArrow"
+			class="fixed top-4 right-4 text-4xl cursor-pointer animate-pulse transition-transform duration-300 ease-in-out z-50 text-white">
+			→
+		</div>
+
+		<div
+			id="sidebar"
+			class="fixed top-0 -right-80 w-80 h-screen bg-purple-900 bg-opacity-90 p-8 transition-all duration-300 ease-in-out z-40">
+			<h2 id="sidebarTitle" class="text-2xl mb-4 text-white">
+				Enter Draw Entries
+			</h2>
+			<div class="flex flex-col space-y-2">
+				<button
+					id="fillSampleDataBtn"
+					class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-400 transition-colors">
+					Fill Sample Data
+				</button>
+				<button
+					id="saveEntriesBtn"
+					class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-400 transition-colors">
+					Save Entries
+				</button>
+			</div>
+			<textarea
+				id="entries"
+				rows="10"
+				cols="30"
+				class="w-full mt-4 p-2 rounded"></textarea>
+		</div>
+
+		<div
+			id="processDraw"
+			class="hidden fixed inset-0 bg-black bg-opacity-80 overflow-hidden z-30">
+			<div id="drawContent" class="w-full h-full relative"></div>
+		</div>
+
+		<div
+			id="winnerDisplay"
+			class="hidden fixed inset-0 flex flex-col items-center justify-center bg-teal-700 bg-opacity-70 text-white z-50">
+			<div
+				id="winnerName"
+				class="text-6xl mb-4 animate-[winnerAppear_1s_ease-out]"></div>
+			<div id="winnerEmail" class="text-2xl mb-8"></div>
+			<button
+				id="drawAgainBtn"
+				class="bg-yellow-500 text-black px-6 py-3 rounded-lg text-xl font-bold hover:bg-yellow-400 transition-colors opacity-0 transition-opacity duration-500 ease-in-out">
+				Draw Again
+			</button>
+		</div>
+
+		<script type="module" src="/src/main.js"></script>
+	</body>
+</html>
