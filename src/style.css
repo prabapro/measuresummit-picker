@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+#button-container,
+#winner-display > div:last-child {
+	min-height: 4rem; /* Matches the h-16 class */
+}
+
+#main-content,
+#winner-display {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
 .entry {
 	font-size: 5vh;
 	background-image: linear-gradient(45deg, #ff00ff, #daeded);

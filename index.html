@@ -19,28 +19,36 @@
 			id="gradient-background"
 			class="gradient-background fixed inset-0 z-[-1]"></div>
 
-		<div
+		<main
 			id="main-content"
-			class="flex flex-col items-center justify-center h-screen transition-all duration-500 ease-in-out"
-			role="main">
-			<div class="flex items-center space-x-8">
-				<img
-					src="/assets/media/measuresummit-logo.png"
-					id="logo"
-					class="w-48 h-auto"
-					alt="MeasureSummit Logo" />
-				<div class="text-left text-white font-roboto-condensed uppercase">
-					<h1 class="text-6xl font-semibold tracking-widest">Measure</h1>
-					<h2 class="text-4xl font-thin tracking-widest">Winner Finder</h2>
+			class="flex flex-col items-center justify-center h-screen transition-all duration-500 ease-in-out">
+			<div class="flex flex-col items-center space-y-8">
+				<div class="flex items-center space-x-8">
+					<img
+						id="logo"
+						src="/assets/media/measuresummit-logo.png"
+						alt="MeasureSummit Logo"
+						class="w-48 h-auto" />
+					<div class="text-left text-white font-roboto-condensed uppercase">
+						<h1 id="measure" class="text-6xl font-semibold tracking-widest">
+							Measure
+						</h1>
+						<h2 id="winner-finder" class="text-4xl font-thin tracking-widest">
+							Winner Finder
+						</h2>
+					</div>
+				</div>
+				<div
+					id="button-container"
+					class="h-16 flex items-center justify-center">
+					<button
+						id="pick-now-btn"
+						class="hidden bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">
+						Draw Now
+					</button>
 				</div>
 			</div>
-
-			<button
-				id="pick-now-btn"
-				class="hidden gradient-background text-white text-2xl border-2 border-purple-700 px-12 mt-8 py-3 rounded-full hover:border-slate-100 transition-colors">
-				Draw Now
-			</button>
-		</div>
+		</main>
 
 		<div
 			id="sidebar-arrow"
@@ -81,16 +89,18 @@
 
 		<div
 			id="winner-display"
-			class="fixed inset-0 flex flex-col items-center justify-center text-white z-50">
+			class="hidden fixed inset-0 flex flex-col items-center justify-center text-white z-50">
 			<div
 				id="winner-name"
 				class="text-10xl text-center font-extrabold mb-4 animate-[winnerAppear_1s_ease-out]"></div>
 			<div id="winner-email" class="text-2xl mb-8"></div>
-			<button
-				id="draw-again-btn"
-				class="bg-yellow-500 text-black px-6 py-3 rounded-lg text-xl font-bold hover:bg-yellow-400 opacity-0 transition-opacity duration-500 ease-in-out">
-				Draw Again
-			</button>
+			<div class="h-16 flex items-center justify-center">
+				<button
+					id="draw-again-btn"
+					class="hidden bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded opacity-0 transition-opacity duration-300">
+					Draw Again
+				</button>
+			</div>
 		</div>
 
 		<script type="module" src="/src/main.js"></script>

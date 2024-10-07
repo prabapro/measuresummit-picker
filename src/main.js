@@ -172,9 +172,9 @@ const showWinner = () => {
 	winnerDisplay.classList.remove('hidden');
 
 	confetti({
-		particleCount: 500,
+		particleCount: 800,
 		spread: 180,
-		origin: { y: 0.6 },
+		origin: { y: 0.3 },
 	});
 
 	setTimeout(() => {
