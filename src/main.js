@@ -6,6 +6,8 @@ import { generateSampleData } from './data/sample-data.js';
 const config = {
 	animationDuration: 8500, // 8.5 seconds in milliseconds
 	audioFile: '/assets/media/drumroll.mp3',
+	sendWinnersEndPoint:
+		'https://script.google.com/macros/s/AKfycbz5kybVmkmossUn8qhslM-_0DtJsyF9yA_juhjnazcWFcEOHZ5br7nCxvfeZnQ9Z9vIaA/exec',
 };
 
 // DOM Elements
@@ -173,6 +175,9 @@ const showWinner = () => {
 
 	fireExtendedConfetti();
 
+	// Send winner data to Google Sheet
+	sendWinnerToSheet(name, email);
+
 	setTimeout(() => {
 		drawAgainBtn.classList.remove('hidden', 'opacity-0');
 	}, 5000);
@@ -251,7 +256,29 @@ const fillSampleData = () => {
 	}, 300);
 };
 
-// TODO: Send winner entries to Google Sheet
+// Function to send winner data to Google Sheet
+const sendWinnerToSheet = async (name, email) => {
+	const trimmedName = name.trim().replace(/\s+/g, ' '); // Remove extra spaces within the name
+	const trimmedEmail = email.trim();
+	const winner = `${trimmedName} (${trimmedEmail}`;
+	const encodedWinner = encodeURIComponent(winner);
+
+	const url = `${config.sendWinnersEndPoint}?winner=${encodedWinner}`;
+
+	try {
+		const response = await fetch(url, {
+			method: 'GET',
+			mode: 'no-cors',
+		});
+
+		console.log('✅ Winner data sent successfully:', {
+			endPoint: config.sendWinnersEndPoint,
+			winner: winner,
+		});
+	} catch (error) {
+		console.error('Error sending winner data:', error);
+	}
+};
 
 // Wait for DOM to be fully loaded before initializing
 document.addEventListener('DOMContentLoaded', initialize);
