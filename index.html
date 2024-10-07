@@ -4,8 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Winner Finder</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap"
+			rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet" />
 	</head>
 	<body
@@ -18,15 +23,18 @@
 			id="main-content"
 			class="flex flex-col items-center justify-center h-screen transition-all duration-500 ease-in-out"
 			role="main">
-			<img
-				src="/assets/media/measuresummitlogo.webp"
-				id="logo"
-				class="mb-4 w-64"
-				alt="MeasureSummit Logo" />
-			<h1 id="app-title" class="mb-8 text-8xl font-semibold text-slate-100">
-				Winner
-				<span class="font-extralight">Finder</span>
-			</h1>
+			<div class="flex items-center space-x-8">
+				<img
+					src="/assets/media/measuresummit-logo.png"
+					id="logo"
+					class="w-48 h-auto"
+					alt="MeasureSummit Logo" />
+				<div class="text-left text-white font-roboto-condensed uppercase">
+					<h1 class="text-6xl font-semibold tracking-wider">Measure</h1>
+					<h2 class="text-5xl font-thin tracking-tight">Winner Finder</h2>
+				</div>
+			</div>
+
 			<button
 				id="pick-now-btn"
 				class="hidden bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition-colors">

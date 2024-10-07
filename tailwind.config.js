@@ -5,6 +5,7 @@ export default {
 		extend: {
 			fontFamily: {
 				lexend: ['Lexend', 'sans-serif'],
+				'roboto-condensed': ['"Roboto Condensed"', 'sans-serif'],
 			},
 			fontSize: {
 				'10xl': '16vmax',
