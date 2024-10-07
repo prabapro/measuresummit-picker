@@ -30,20 +30,20 @@ let drumrollAudio;
 // Initialize function to be called when DOM is fully loaded
 const initialize = () => {
 	// Get DOM Elements
-	mainContent = document.getElementById('mainContent');
-	sidebarArrow = document.getElementById('sidebarArrow');
+	mainContent = document.getElementById('main-content');
+	sidebarArrow = document.getElementById('sidebar-arrow');
 	sidebar = document.getElementById('sidebar');
-	pickNowBtn = document.getElementById('pickNowBtn');
+	pickNowBtn = document.getElementById('pick-now-btn');
 	entries = document.getElementById('entries');
-	saveEntriesBtn = document.getElementById('saveEntriesBtn');
-	winnerDisplay = document.getElementById('winnerDisplay');
-	winnerName = document.getElementById('winnerName');
-	winnerEmail = document.getElementById('winnerEmail');
-	drawAgainBtn = document.getElementById('drawAgainBtn');
-	processDraw = document.getElementById('processDraw');
-	drawContent = document.getElementById('drawContent');
-	animatedBg = document.getElementById('animatedBg');
-	fillSampleDataBtn = document.getElementById('fillSampleDataBtn');
+	saveEntriesBtn = document.getElementById('save-entries-btn');
+	winnerDisplay = document.getElementById('winner-display');
+	winnerName = document.getElementById('winner-name');
+	winnerEmail = document.getElementById('winner-email');
+	drawAgainBtn = document.getElementById('draw-again-btn');
+	processDraw = document.getElementById('process-draw');
+	drawContent = document.getElementById('draw-content');
+	animatedBg = document.getElementById('animated-bg');
+	fillSampleDataBtn = document.getElementById('fill-sample-data-btn');
 
 	// Event Listeners
 	sidebarArrow.addEventListener('click', toggleSidebar);
