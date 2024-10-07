@@ -175,7 +175,7 @@ const showWinner = () => {
 
 	setTimeout(() => {
 		drawAgainBtn.classList.remove('hidden', 'opacity-0');
-	}, 3000);
+	}, 5000);
 };
 
 const fireExtendedConfetti = () => {
