@@ -1,6 +1,6 @@
 import './style.css';
 import confetti from 'canvas-confetti';
-import { generateSampleData } from './data/sampleData.js';
+import { generateSampleData } from './data/sample-data.js';
 
 // Configuration
 const config = {
@@ -42,7 +42,7 @@ const initialize = () => {
 	drawAgainBtn = document.getElementById('draw-again-btn');
 	processDraw = document.getElementById('process-draw');
 	drawContent = document.getElementById('draw-content');
-	animatedBg = document.getElementById('animated-bg');
+	animatedBg = document.getElementById('gradient-background');
 	fillSampleDataBtn = document.getElementById('fill-sample-data-btn');
 
 	// Event Listeners

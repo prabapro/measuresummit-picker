@@ -10,7 +10,9 @@
 	</head>
 	<body
 		class="font-lexend m-0 p-0 h-screen overflow-hidden bg-gradient-to-br from-black to-purple-900 text-white">
-		<div id="animated-bg" class="animated-bg fixed inset-0 z-[-1]"></div>
+		<div
+			id="gradient-background"
+			class="gradient-background fixed inset-0 z-[-1]"></div>
 
 		<div
 			id="main-content"
@@ -20,14 +22,14 @@
 				src="/assets/media/measuresummitlogo.webp"
 				id="logo"
 				class="mb-4 w-64"
-				alt="Logo" />
-			<h1 id="appTitle" class="mb-8 text-8xl font-semibold text-slate-100">
+				alt="MeasureSummit Logo" />
+			<h1 id="app-title" class="mb-8 text-8xl font-semibold text-slate-100">
 				Winner
 				<span class="font-extralight">Finder</span>
 			</h1>
 			<button
 				id="pick-now-btn"
-				class="hidden bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-600 transition-colors">
+				class="hidden bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition-colors">
 				Draw Now
 			</button>
 		</div>
@@ -41,7 +43,7 @@
 		<div
 			id="sidebar"
 			class="fixed top-0 -right-80 w-80 h-screen bg-purple-900 bg-opacity-90 p-8 transition-all duration-300 ease-in-out z-40">
-			<h2 id="sidebarTitle" class="text-2xl mb-4 text-white">
+			<h2 id="sidebar-title" class="text-2xl mb-4 text-white">
 				Enter Draw Entries
 			</h2>
 			<div class="flex flex-col space-y-2">
@@ -63,18 +65,16 @@
 				class="w-full mt-4 p-2 rounded"></textarea>
 		</div>
 
-		<div
-			id="process-draw"
-			class="hidden fixed inset-0 bg-black bg-opacity-80 overflow-hidden z-30">
+		<div id="process-draw" class="hidden fixed inset-0 overflow-hidden z-30">
 			<div id="draw-content" class="w-full h-full relative"></div>
 		</div>
 
 		<div
 			id="winner-display"
-			class="fixed inset-0 flex flex-col items-center justify-center bg-teal-700 bg-opacity-70 text-white z-50">
+			class="fixed inset-0 flex flex-col items-center justify-center text-white z-50">
 			<div
 				id="winner-name"
-				class="text-6xl mb-4 animate-[winnerAppear_1s_ease-out]"></div>
+				class="text-10xl text-center font-extrabold mb-4 animate-[winnerAppear_1s_ease-out]"></div>
 			<div id="winner-email" class="text-2xl mb-8"></div>
 			<button
 				id="draw-again-btn"

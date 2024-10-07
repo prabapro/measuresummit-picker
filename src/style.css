@@ -2,11 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles */
-.animated-bg {
-	background: linear-gradient(242deg, #bcb631, #48e1a9, #933ed0);
+.entry {
+	font-size: 5vh;
+	background-image: linear-gradient(45deg, #ff00ff, #00ffff);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+/* Ensure confetti is on top */
+canvas {
+	z-index: 1001 !important;
+}
+
+/* Generated at https://animated-gradient-background-generator.netlify.app/ */
+.gradient-background {
+	background: linear-gradient(300deg, deepskyblue, darkviolet, #003163);
 	background-size: 180% 180%;
-	animation: gradient-animation 15s ease infinite;
+	animation: gradient-animation 21s ease infinite;
 }
 
 @keyframes gradient-animation {
@@ -19,14 +32,6 @@
 	100% {
 		background-position: 0% 50%;
 	}
-}
-
-.entry {
-	font-size: 5vh;
-	background-image: linear-gradient(45deg, #ff00ff, #00ffff);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
 }
 
 @keyframes float {
@@ -48,9 +53,4 @@
 		opacity: 1;
 		transform: scale(1);
 	}
-}
-
-/* Ensure confetti is on top */
-canvas {
-	z-index: 1001 !important;
 }

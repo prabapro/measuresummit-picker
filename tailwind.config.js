@@ -6,6 +6,9 @@ export default {
 			fontFamily: {
 				lexend: ['Lexend', 'sans-serif'],
 			},
+			fontSize: {
+				'10xl': '16vmax',
+			},
 		},
 	},
 	plugins: [],
