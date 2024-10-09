@@ -7,7 +7,7 @@ const config = {
 	animationDuration: 8500, // 8.5 seconds in milliseconds
 	audioFile: '/assets/media/drumroll.mp3',
 	sendWinnersEndPoint:
-		'https://script.google.com/macros/s/AKfycbz5kybVmkmossUn8qhslM-_0DtJsyF9yA_juhjnazcWFcEOHZ5br7nCxvfeZnQ9Z9vIaA/exec',
+		'https://script.google.com/macros/s/AKfycby-yjGYjFkaGtngThyvvSfeIX0PB0IWaaQRKebKV72IZrK07Zr429baj3mYOlUKg3SWmQ/exec?spreadsheetId=1d2N3feTPDZxxlmrJ09QY1bgQP4ICUwdFxmOoAFJzHGE',
 };
 
 // DOM Elements
@@ -263,7 +263,7 @@ const sendWinnerToSheet = async (name, email) => {
 	const winner = `${trimmedName} (${trimmedEmail}`;
 	const encodedWinner = encodeURIComponent(winner);
 
-	const url = `${config.sendWinnersEndPoint}?winner=${encodedWinner}`;
+	const url = `${config.sendWinnersEndPoint}&winner=${encodedWinner}`;
 
 	try {
 		const response = await fetch(url, {
